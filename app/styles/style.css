@@ -1,0 +1,86 @@
+.tags {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding-left: 0;
+
+}
+.tag {
+    margin-right: 5px;
+    border-radius: 6px;
+    padding-left: 5px;
+    border-width: 2px;
+    padding-right: 5px;
+    border-color: rgba(36, 174, 255, 0.36);
+    border-style: outset;
+}
+.media-body {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 15px;
+    border-color: rgba(36, 174, 255, 0.36);
+    border-style: outset;
+}
+.media-heading {
+    font-weight: bold;
+}
+
+.edit, .remove {
+    padding: 5px;
+}
+
+.sortorder:after {
+    content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+    content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
+.like, .dislike {
+    cursor: pointer;
+}
+.likes {
+    margin-left: -15px;
+}
+.mark {
+    z-index: 1;
+    background-color: #f1f1f1 ;
+}
+@media (max-width: 390px) {
+    .tags {
+        font-size: 12px;
+    }
+    .tag {
+        padding: 2px;
+        border-radius: 5px;
+        border-width: 2px;
+        padding-bottom: 1px;
+        padding-top: 1px;
+    }
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .sort {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .tag-filter {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .filtration .btn, .form-control {
+        font-size: 12px;
+    }
+    .post {
+        padding-left: 25px;
+    }
+}
+@media (min-width: 1200px) {
+    .like, .dislike {
+        font-size: 18px;
+    }
+    .like {
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+}

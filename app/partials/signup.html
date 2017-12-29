@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">Sign Up</div>
+            </div>
+            <div class="panel-body">
+                <form ng-submit="signup(username, password, email)" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">Email</label>
+                        <div class="col-md-9">
+                            <input ng-model="email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{1,3}$/" required type="email" name="email" value="" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname" class="col-md-3 control-label">Name</label>
+                        <div class="col-md-9">
+                            <input required ng-model="username" type="text" name="firstname" value="" placeholder="Name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">Password</label>
+                        <div class="col-md-9">
+                            <input required ng-model="password" type="password" name="password" value="" placeholder="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-md-offset-3 col-md-9">
+                            <button ng-disabled="form.$invalid" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal success-->
+<div class="modal fade" id="modal-success" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Label">Sign up</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="alert alert-success">Congratulations!Your account was created.</div>
+        </div>
+    </div>
+</div>
